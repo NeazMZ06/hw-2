@@ -1,16 +1,16 @@
 dictionary 2
-n spritesheet-tiles-default.png 128 64 64 64 0 0 64 64
-U spritesheet-tiles-default.png 128 192 64 64 0 0 64 64
-H spritesheet-tiles-default.png 128 128 64 64 0 0 64 64
-S spritesheet-tiles-default.png 0 64 64 64 0 0 64 64
-T spritesheet-tiles-default.png 192 192 64 64 0 0 64 64
-o spritesheet-tiles-default.png 192 0 64 64 0 0 64 64
-x spritesheet-tiles-default.png 1024 960 64 64 -1 10 66 44
-( spritesheet-tiles-default.png 192 128 64 64 0 0 64 64
-) spritesheet-tiles-default.png 192 64 64 64 0 0 64 64
-X spritesheet-tiles-default.png 192 384 64 64 0 0 64 64
-[ spritesheet-tiles-default.png 192 320 64 64 0 0 64 64
-] spritesheet-tiles-default.png 192 256 64 64 0 0 64 64
+n spritesheet-tiles-default.png 130 65 64 64 0 0 64 64
+U spritesheet-tiles-default.png 130 195 64 64 0 0 64 64
+H spritesheet-tiles-default.png 130 130 64 64 0 0 64 64
+S spritesheet-tiles-default.png 0 65 64 64 0 0 64 64
+T spritesheet-tiles-default.png 195 195 64 64 0 0 64 64
+o spritesheet-tiles-default.png 195 0 64 64 0 0 64 64
+x spritesheet-tiles-default.png 1040 975 64 64 -1 10 66 44
+( spritesheet-tiles-default.png 195 130 64 64 0 0 64 64
+) spritesheet-tiles-default.png 195 65 64 64 0 0 64 64
+X spritesheet-tiles-default.png 195 390 64 64 0 0 64 64
+[ spritesheet-tiles-default.png 195 325 64 64 0 0 64 64
+] spritesheet-tiles-default.png 195 260 64 64 0 0 64 64
 map origin 0 0 tile 64 64 size 64 14
 ..............................nx...........n.........n..........
 ..............................Hn...n.......H.........H..........
