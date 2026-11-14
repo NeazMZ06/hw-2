@@ -1,12 +1,12 @@
 CMPUT 350 Project 2
-Implemented by a single person. There are no teammates.
+Implemented by Neaz Mohammad Zahir
 
 What is implemented
 - Entity, sound, sprite, and window managers, plus the system manager that shipped with the starter.
 - The twelve gameplay components, each in its own header.
 - ProcessEvents and the nine systems, run in the order CollisionLateSystem (the writeup's CollisionSystemUpdate), InputSystem, GravitySystem, MovementSystem, CollisionSystem, ScoreSystem, CameraSystem, SpriteSystem, SpawnSystem.
 - sky.map and world.map are loaded without changing their layout. S tiles become star spawners. One extra star is placed on the left so wall jumping can be tested before the spawner fires.
-- The platformer: arrow keys move, Z jumps, C dashes, holding down falls faster, releasing Z shortens the jump. Wall contact while falling slows the fall and plays a sound. Jumping from that wall pushes away from it. Stars bounce off tiles and each other, lose speed, and award a point. The score is three digits in the upper-left. The camera keeps a fixed y and follows x. A solid hit shakes the screen in the direction of the hit.
+- The platformer: arrow keys move, Z jumps, C dashes, holding down arrow falls faster, releasing Z shortens the jump. Wall contact while falling slows the fall and plays a sound. Jumping from that wall pushes away from it. Stars bounce off tiles and each other, lose speed, and award a point. The score is three digits in the upper-left. The camera keeps a fixed y and follows x. A solid hit shakes the screen in the direction of the hit.
 
 Resource lifetimes
 - EntityID is an index into the entity vector. RemoveEntity leaves a gap. IsValid() is false for that gap until CreateEntity reuses the id. Iterators visit gaps; skip entities that are not valid.
@@ -23,3 +23,7 @@ Drawing
 
 Tuning
 - Movement constants from InputSystem.h are pixels per frame, with vsync on. Dash cooldown is 60 frames so it matches "at most once per second". The starter constant kDashInterval is 25 and is not the cooldown. A dash holds kDashVelocity for 10 frames with gravity paused, which is enough to cross the wider shaft. Gravity is 1.15 px/frame^2, wall-slide gravity is 0.22, and holding down uses 2.8. Star bounces keep 70% of their speed against tiles and 85% against other stars. The camera scale fits the 896px map height into the 768px window, and its y stays at the map's midpoint.
+
+
+AI Usage: I have used AI to understand the project and modify multiple lines of codes better tailored according to the requirements of the project. I have also run across several compile errors and bugs that I used the help of AI to understand and solve the bugs.
+
