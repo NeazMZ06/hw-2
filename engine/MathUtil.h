@@ -10,7 +10,7 @@ namespace ECSEngine {
 struct Point2D {
     float x, y;
     Point2D(float x = 0, float y = 0) : x(x), y(y) {}
-    Point2D(int x, int y) : x(x), y(y) {}
+    Point2D(int ix, int iy) : x(static_cast<float>(ix)), y(static_cast<float>(iy)) {}
 };
 
 [[maybe_unused]] static std::ostream& operator<<(std::ostream& os, const Point2D& p) {
@@ -50,6 +50,25 @@ struct Rect {
 [[maybe_unused]] static std::ostream& operator<<(std::ostream& os, const Rect& r) {
     os << "R{" << r.topLeft << ", " << r.width << "x" << r.height << "}";
     return os;
+}
+
+inline Rect MakeRect(float x, float y, float w, float h) {
+    Rect r;
+    r.topLeft = Point2D(x, y);
+    r.width = w;
+    r.height = h;
+    return r;
+}
+
+// relative is stored as an offset from an entity's LocationComponent.
+inline Rect WorldRect(const Point2D& origin, const Rect& relative) {
+    return MakeRect(origin.x + relative.topLeft.x, origin.y + relative.topLeft.y, relative.width,
+                    relative.height);
+}
+
+inline bool RectsOverlap(const Rect& a, const Rect& b) {
+    return a.topLeft.x < b.topLeft.x + b.width && a.topLeft.x + a.width > b.topLeft.x &&
+           a.topLeft.y < b.topLeft.y + b.height && a.topLeft.y + a.height > b.topLeft.y;
 }
 
 }  // namespace ECSEngine
